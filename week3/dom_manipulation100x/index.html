@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <input type="text"/>
+        <button onclick="addTodo()">Add Todo!</button>
+
+    </body>
+    <script>
+        let count = 1;
+        function addTodo(){
+            const enteredTask = document.querySelector('input')
+            console.log(enteredTask.value)
+            const newTodo = document.createElement('h4')
+            newTodo.innerHTML = `${count}. ${enteredTask.value}`
+            count++;
+            console.log(newTodo)
+            document.querySelector('body').appendChild(newTodo)
+            document.querySelector('input').value = ''
+        }
+
+       
+    </script>
+</html>

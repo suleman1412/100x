@@ -1,0 +1,83 @@
+body{
+    background-color: #0e0e0e;
+}
+h1{
+    text-align: center;
+    color: beige;
+
+}
+*{
+    font-family: 'Segoe UI';
+}
+
+
+body{
+    padding: 20px;
+}
+.todo-container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    background-color: #444343;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+}
+
+#add-input{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ebd1d1;
+    border-radius: 5px;
+    background-color: #555555;
+    color: white;
+    border-color: white;
+}
+#add-input::placeholder{
+    color: white;
+}
+
+#add-btn{
+    padding: 10px;
+    background-color: rgb(209, 134, 73) ;
+    color: #555555;
+    font-weight: bolder;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-btn:hover{
+    background-color: rgb(255, 204, 153);
+}
+
+#todo-list{
+
+    list-style: none;
+    color: white
+}
+
+#todo-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    /* background: #f8f9fa; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+}
+#delete-btn {
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background: #c82333;
+}
