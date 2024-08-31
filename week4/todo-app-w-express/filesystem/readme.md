@@ -22,7 +22,7 @@ This is a todo application built with Express.js that provides persistent storag
    ```
 4. Start the server:
    ```
-   node server.js
+   node persistent.js
    ```
 
 The server will run on `http://localhost:3000`.
