@@ -1,0 +1,28 @@
+/* styles.css */
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    border: 2px dashed red;
+    max-width: 100%;
+    min-width: 20%;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.preview {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 150px;
+}
