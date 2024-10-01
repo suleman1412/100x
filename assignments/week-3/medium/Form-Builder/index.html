@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Builder</h1>
+        <div class="controls">
+            <select id="fieldType">
+                <option value="" disabled>Select Input Type</option>
+                <option value="text">Text Input</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio Button</option>
+            </select>
+            <button onclick="addField()">Add Field</button>
+        </div>
+        <div class="preview" id="preview"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
