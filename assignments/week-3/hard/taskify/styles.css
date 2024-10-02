@@ -1,0 +1,147 @@
+
+:root{
+    --bgcolor: #26252d;
+    --surfacecolors: #3d3c43;
+    --inputcolor: #56555b;
+    --cardcolor: #6f6f74;
+    --svgcolor: #8a8a8f;
+    --ff1: Lora ;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 90vh;
+    width: 90vw;
+    max-width: 1440px;
+    min-width: 375px;
+    min-height: auto;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+body {
+    background: #57565c;
+    background-image: radial-gradient(rgb(201, 199, 199) 1px, transparent 0);
+    background-size: 25px 25px;
+    background-position: -19px -19px;
+    overflow: hidden;
+}
+label{
+    cursor: pointer;
+}
+
+label:hover{
+    color: var(--svgcolor);
+}
+
+
+svg, path{
+    width: 1rem;
+    object-fit: cover;
+    fill: var(--svgcolor)
+}
+
+.addTodo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.7em;
+
+    margin: 2rem;
+    width: 15em;
+    background-color: var(--surfacecolors);
+    padding: 1rem;
+    border-radius: 0.87rem;
+}
+
+.ip{
+    display: flex;
+    align-items: center;
+
+
+    padding: 0 0.5em;
+    background-color: var(--inputcolor);
+    gap: 1em;
+    border-radius: 1em;
+}
+
+#textField{
+    flex-grow: 1;
+    background-color: var(--inputcolor);
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    font-family: var(--ff1);
+    border-radius: 1rem;
+}
+
+.svgBtn{
+    display: flex;
+}
+
+#textField::placeholder{
+    color: white;
+    font-size: 0.5rem;
+    font-family: var(--ff1);
+
+}
+#textField:focus {
+    border: none; 
+    outline: none; 
+}
+
+
+#radios{
+    display: flex;
+    justify-content: space-around;
+}
+
+#easy, #hard, #medium{
+    font-size: 0.6rem;
+}
+
+.board{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+#laneHeading{
+    text-align: center;
+    background-color: var(--surfacecolors);
+}
+
+#laneHeading h1{
+    font-family: var(--ff1);
+    font-weight: 200;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.lane{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--surfacecolors);
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 1rem;
+    color: white;
+}
+
+.taskCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--cardcolor);
+    font-size: 0.6rem;
+    font-family: var(--ff1);
+
+}
+
