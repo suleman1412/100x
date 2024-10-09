@@ -18,6 +18,12 @@ droppables.forEach(lane => {
     lane.addEventListener('drop', () => {
         const currTask = document.querySelector('.is-dragging')
         lane.appendChild(currTask)
+        if(lane.id === 'completed'){
+            currTask.classList.add('line-through')
+        }
+        else{
+            currTask.classList.remove('line-through')
+        }
     })
 })
     

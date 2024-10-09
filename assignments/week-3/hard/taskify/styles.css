@@ -12,20 +12,20 @@ body{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    height: 90vh;
-    width: 90vw;
+    height: 100vh;
+    width: 100vw;
     max-width: 1440px;
     min-width: 375px;
     min-height: auto;
     background-color: var(--bgcolor);
-    color: var(--textcolor);
-}
-body {
-    background: #57565c;
     background-image: radial-gradient(rgb(201, 199, 199) 1px, transparent 0);
     background-size: 25px 25px;
     background-position: -19px -19px;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 label{
     cursor: pointer;
@@ -37,7 +37,7 @@ label:hover{
 
 
 svg, path{
-    width: 1rem;
+    width: 1.5rem;
     object-fit: cover;
     fill: var(--svgcolor)
 }
@@ -72,7 +72,7 @@ svg, path{
     border: none;
     color: white;
     padding: 0.5rem;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     font-family: var(--ff1);
     border-radius: 1rem;
 }
@@ -83,7 +83,7 @@ svg, path{
 
 #textField::placeholder{
     color: white;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     font-family: var(--ff1);
 
 }
@@ -92,15 +92,6 @@ svg, path{
     outline: none; 
 }
 
-
-#radios{
-    display: flex;
-    justify-content: space-around;
-}
-
-#easy, #hard, #medium{
-    font-size: 0.6rem;
-}
 
 .board{
     margin: 2rem;
@@ -112,12 +103,16 @@ svg, path{
 #laneHeading{
     text-align: center;
     background-color: var(--surfacecolors);
+    border-radius: 1em;
+    border: 1px solid var(--bgcolor);
 }
 
 #laneHeading h1{
     font-family: var(--ff1);
-    font-weight: 200;
-    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
     color: white;
 }
 
@@ -125,23 +120,36 @@ svg, path{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: var(--surfacecolors);
-    border-radius: 1em;
+    
     overflow: hidden;
     padding: 1rem;
     color: white;
+    min-height: 10em;
+    border-radius: 1rem;
+    background-image: linear-gradient(var(--surfacecolors), transparent );
 }
 
 .taskCard{
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
     height: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 0.4rem;
     background-color: var(--cardcolor);
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-family: var(--ff1);
+    padding: 0.5rem 2rem;
 
 }
 
+.small{
+    font-size: 0.95rem;
+    bottom: 1;
+}
+
+.is-dragging{
+    background: linear-gradient(var(--bgcolor), var(--surfacecolors));
+}
+
+.line-through{
+    text-decoration: line-through;
+}
