@@ -16,6 +16,28 @@ setInterval(() => {
     numberOfRequestsForUser = {};
 }, 1000)
 
+app.use((req, res, next) => {
+
+  let userId = req.headers['user-id']
+  if(!userId){
+    res.status(404).json({
+      message: 'User-id not provided in the Headers'
+    })
+  }
+  if(!numberOfRequestsForUser[userId]){
+    numberOfRequestsForUser[userId] = 1
+  }
+  else{
+    numberOfRequestsForUser[userId]++;
+  }
+
+  if(numberOfRequestsForUser[userId] > 5){
+    res.status(404).json({message: "You're being rate limited, chill out"})
+    return;
+  }
+  next()
+})
+
 app.get('/user', function(req, res) {
   res.status(200).json({ name: 'john' });
 });
@@ -23,5 +45,9 @@ app.get('/user', function(req, res) {
 app.post('/user', function(req, res) {
   res.status(200).json({ msg: 'created dummy user' });
 });
+
+// app.listen(3000, () => {
+//   console.log('server running on Port 3000')
+// })
 
 module.exports = app;

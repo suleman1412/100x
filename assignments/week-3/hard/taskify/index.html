@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draggable todo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="addTodo">
+        <div class="ip">
+            <input type="text" id="textField" placeholder="Add tasks...">
+            <input type="radio" id="Btn" hidden>
+            <label for="Btn" class="svgBtn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/>
+                    <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg> 
+            </label>
+        </div>
+    
+        
+    </div>
+    <div class="board">
+        <div class="lane" id="todo">
+            <div id="laneHeading">
+                <h1>T<span class="small">odo</span></h1>
+            </div>
+        </div>
+        <div class="lane" id="in-progress">
+            <div id="laneHeading">
+                <h1>I<span class="small">n</span>-P<span class="small">rogress</span></h1>
+            </div>
+
+        </div>
+        <div class="lane" id="completed">
+            <div id="laneHeading">
+                <h1>C<span class="small">ompleted</span></h1>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="drag.js"></script>
+</body>
+</html>
