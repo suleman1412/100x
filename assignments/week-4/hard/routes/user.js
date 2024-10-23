@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const { Router } = require("express");
 const UserRouter = Router();
 const userMiddleware = require("../middleware/user");
-const { User } = require('../database/index')
+const { User, Todo } = require('../database/index')
 const jwt = require('jsonwebtoken')
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -51,13 +51,12 @@ UserRouter.post('/login', async (req, res) => {
             return;
         }
 
-        const passwordMatch = await bcrypt.compare(password, response.password)
-        if(passwordMatch){
+        const isPasswordValid = await bcrypt.compare(password, response.password)
+        if(isPasswordValid){
             const token = jwt.sign({
                 email: response.email
             }, JWT_SECRET)
             
-            console.log("Credentials Match")
             return res.status(200).json({
                 token: token
             })
@@ -76,8 +75,12 @@ UserRouter.post('/login', async (req, res) => {
 
 });
 
-UserRouter.get('/todos', userMiddleware, (req, res) => {
+UserRouter.get('/todos', userMiddleware, async(req, res) => {
     // Implement logic for getting todos for a user
+    const email = 
+    const todos = await Todo.find(email) || 'empty'
+    console.log(todos)
+    
 });
 
 UserRouter.post('/logout', userMiddleware, (req, res) => {
