@@ -1,0 +1,15 @@
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+    
+  }
+  
+  .star.filled {
+    color: gold;
+    box-shadow: 5px 5px 10px gold;
+  }
+
+  .star.unfilled{
+    box-shadow: 5px 5px 10px gray;
+  }
