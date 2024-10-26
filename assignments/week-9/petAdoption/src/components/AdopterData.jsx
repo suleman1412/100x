@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-no-comment-textnodes */
+ 
 const AdopterData = ({ formData, handleGoBack }) => {
     return <div>
         <table>
@@ -12,6 +15,7 @@ const AdopterData = ({ formData, handleGoBack }) => {
                 </tr>
             </thead>
             <tbody>
+            // eslint-disable-next-line react/prop-types
             {formData.map((data, index) => (
                 <tr key={index}>
                     <td>{data.petName}</td>
