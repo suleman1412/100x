@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import AdopterData from './AdopterData';
-import { validation } from "../utils/validation"
+// import { validation } from "../utils/validation"
+import {validation} from "../src/utils/validation"
 
 
 const PetAdoptionForm = () => {
@@ -27,17 +28,13 @@ const PetAdoptionForm = () => {
         phone: ""
     });
     const handleChange = (event) => {
-        /* The code snippet `const { name, value } = event.target;` is extracting the `name` and `value`
-        properties from the event target object. In this case, it is typically used in an input
-        change event handler to get the name and value of the input field that triggered the change. */
+
         const { name, value } = event.target;
         setValues((prevValues) => ({
             ...prevValues,
             [name]: value,
         }));
-        /* The line `let errorsCopy = { ...errors };` is creating a shallow copy of the `errors` object using
-        the spread operator (`...`). This is done to ensure that any modifications made to `errorsCopy` do
-        not directly affect the original `errors` object. */
+
 
         let errorsCopy = { ...errors };
         const errorR = validation(name, value, errorsCopy);
@@ -45,20 +42,7 @@ const PetAdoptionForm = () => {
 
     }
     const handleSubmit = () => {
-        console.log(
-            `Pet Name: ${petName} 
-            Pet Type: ${petType} 
-            Breed: ${breed} 
-            Adopter Name: ${adopterName} 
-            Email: ${email} 
-            Phone: ${phone}`
-        );
-        if (!petName
-            || !breed || !adopterName
-            || !email || !phone) {
-            alert("Please fill out all fields");
-            return;
-        }
+
         /* The line `const hasErrors = Object.values(errors).some((val) => val);` is checking if there are any
         errors present in the `errors` object. */
         const hasErrors = Object.values(errors).some((val) => val);
