@@ -2,5 +2,5 @@ node_modules
 public
 claude_server.js
 .replit
-node_modules
-package*
+.DS_Store
+solution
