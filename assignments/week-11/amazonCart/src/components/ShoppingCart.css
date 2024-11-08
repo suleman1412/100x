@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 4rem;
+}
+.ListContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 2px rgb(223, 223, 223);
+}
+
+
+#heading{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+.itemCard{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    font-family: 'Montserrat';
+    border-bottom: 0.5px solid rgb(219, 216, 216);
+
+    & img{
+        width: 100%;
+    }
+
+    & #productTitle{
+        flex: 1;
+        font-size: 0.75rem;
+        font-weight: 600;
+
+    }
+
+    & #productPrice{
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    & #removeButton{
+        border: none;
+        font-size: 1rem;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+#removeButton:hover{
+    scale: 1.2;
+}
+
+
+
+.checkOutContainer{
+    background-color: white;
+    height: fit-content;
+    padding: 1rem;
+    min-width: 15em;
+
+    & #checkOutHeading {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    & #itemsText {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+        font-size: 0.75rem;
+        border-bottom: 0.5px solid rgb(219, 216, 216);
+    }
+
+    & #orderTotal{
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        font-family: 'Montserrat';
+        font-weight: 600;
+    }
+
+    & #BuyButton{
+        width: 100%;
+        background-color: #ff6b6b;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: white;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    & #BuyButton:hover{
+        background-color: #e53935;
+    }
+       
+}
