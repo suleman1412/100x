@@ -1,3 +1,15 @@
+html{
+    width: 100vw;
+    overflow-x: hidden;
+}
 body{
     background-color: rgb(242, 242, 242);
+    padding-right: calc(100vw - 100%);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+

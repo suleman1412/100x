@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import './ShoppingCart.css'
 import CartEmpty from "./CartEmpty";
@@ -19,8 +20,10 @@ const ShoppingCart = ({ itemsInCart, setItemsInCart }) => {
 };
 
 function ImageCard({ itemsInCart, setItemsInCart }) {
-    const removeItem = (idToRemove) => {
-        setItemsInCart(prevData => prevData.filter(item => item.id !== idToRemove));
+    const removeItem = (idToRemove, indexToRemove) => {
+        setItemsInCart(prevData => 
+            prevData.filter((item, index) => !(item.id === idToRemove && index === indexToRemove))
+        )
     };
 
     return (
@@ -28,11 +31,12 @@ function ImageCard({ itemsInCart, setItemsInCart }) {
             <div id="heading">Shopping Cart</div>
             {itemsInCart.length === 0 ? <CartEmpty /> : <div>
                 {itemsInCart.map((item, index) => (
-                    <div className="itemCard" key={`${item.id}-${index}`}> {/* Combine item.id with index */}
+                    <div className="itemCard" key={`${item.id}-${index}`}>
+                        {/* {console.log(`Product : ${item.title}ItemId: ${item.id} Index: ${index} `)} */}
                         <img src={item.thumbnail} alt={item.title} style={{ width: '100px' }} />
                         <h6 id="productTitle">{item.title}</h6>
                         <p id='productPrice'>$ {item.price}</p>
-                        <button id='removeButton' onClick={() => removeItem(item.id)}>🗑️</button>
+                        <button id='removeButton' onClick={() => removeItem(item.id, index)}>🗑️</button>
                     </div>
                 ))}
             </div>}
