@@ -2,11 +2,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './BrowseProducts.css';
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'; 
 import ProductCard from './ProductCard';
 
-const BrowseProducts = ({  setItemsInCart, itemsInCart }) => {
+const BrowseProducts = ({  setItemsInCart }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [products, setProducts] = useState([]);
     useEffect(() => {

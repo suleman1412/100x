@@ -30,7 +30,7 @@ const NavBar = () => {
         </div>
       </div>
       <div>
-        {currTab === 'Browse' ? <BrowseProducts setItemsInCart={setItemsInCart} itemsInCart={itemsInCart}/> : <ShoppingCart itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>}
+        {currTab === 'Browse' ? <BrowseProducts setItemsInCart={setItemsInCart} /> : <ShoppingCart itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>}
       </div>
     </>
   )
