@@ -4,3 +4,4 @@ claude_server.js
 .replit
 .DS_Store
 solution
+dist/
